@@ -1,0 +1,377 @@
+/* ==========================================================================
+   Design Token Variable Definitions (Eco High-Contrast Set)
+   ========================================================================== */
+:root {
+    --bg-main: #f4f6f4;
+    --bg-card: #ffffff;
+    --text-dark: #0f2d1e;   /* Extreme contrast forest green print accent */
+    --text-muted: #4a6154;
+    --text-light: #ffffff;
+    --accent-green: #1b5e20; /* Primary micro-mobility identifier code */
+    --accent-hover: #0d3c13;
+    --border-light: #cfe0d4;
+    
+    --font-stack: Arial, sans-serif;
+    --line-height-base: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 80px; /* Essential safety offset block preventing fixed nav overlapping */
+    font-family: var(--font-stack);
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    line-height: var(--line-height-base);
+}
+
+/* ==========================================================================
+   Header & Navigation (Strict Fixed Execution Blueprint)
+   ========================================================================== */
+#header {
+    background-color: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--border-light);
+    position: fixed; /* Explicitly forced parameter to conform to user story 13 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+}
+
+#nav-bar {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    background-color: var(--border-light);
+    color: var(--accent-green);
+}
+
+/* ==========================================================================
+   No-JS Pricing Selection Engine
+   ========================================================================== */
+/* Hide the default utility radio circles entirely */
+.plan-radio {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Set cursor behavior for the label wrapper cards */
+label.pricing-card {
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    display: block;
+}
+
+/* Hover state elevation feedback */
+label.pricing-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-green);
+    box-shadow: 0 8px 20px rgba(27, 94, 32, 0.1);
+}
+
+/* Hide the badge component by default layout rules */
+.select-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--accent-green);
+    color: var(--text-light);
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.2s ease-in-out;
+}
+
+/* ==========================================================================
+   Checked Trigger Logic State Changes
+   ========================================================================== */
+/* When radio is checked, highlight the immediate adjacent sibling label card */
+.plan-radio:checked + label.pricing-card {
+    border: 2px solid var(--accent-green);
+    background-color: #ebf2ed; /* Smooth subtle light green glow background */
+    box-shadow: 0 4px 15px rgba(27, 94, 32, 0.15);
+}
+
+/* Reveal and scale the text badge seamlessly when clicked */
+.plan-radio:checked + label.pricing-card .select-badge {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Style the photographer attribution inside the caption */
+.image-credit {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-align: right;
+}
+
+.image-credit a {
+    color: var(--accent-green);
+    text-decoration: none;
+    transition: text-decoration 0.2s ease;
+}
+
+.image-credit a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Main Content Layout Matrix Block
+   ========================================================================== */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+/* Hero Section Engineering */
+.hero-section {
+    background-color: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border: 1px solid var(--border-light);
+}
+
+.hero-copy {
+    flex: 1 1 50%;
+}
+
+.hero-copy h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 0 0 1rem;
+    line-height: 1.2;
+}
+
+.hero-copy p {
+    margin: 0 0 1.5rem;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* Image box turned into a flexible column container to anchor text */
+.hero-image-box {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-image-box img {
+    width: 100%;
+    max-width: 100%;
+    height: 320px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 1px solid var(--border-light);
+    filter: saturate(90%) contrast(105%);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Dynamic glow effect for the green lights on hover */
+.hero-image-box img:hover {
+    filter: saturate(125%) contrast(110%);
+    transform: scale(1.01);
+}
+
+/* Interactive Action Buttons styling */
+.button, .submit-button {
+    display: inline-block;
+    background-color: var(--accent-green);
+    color: var(--text-light);
+    padding: 0.9rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover, .submit-button:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Card Grids System Layout configuration */
+.feature-grid, .pricing-grid {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.feature-card, .pricing-card {
+    flex: 1 1 300px;
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 14px;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 4px 15px rgba(15, 45, 30, 0.03);
+}
+
+.highlighted-card {
+    border: 2px solid var(--accent-green);
+    position: relative;
+}
+
+.price-tag {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-green);
+    margin: 0.5rem 0;
+}
+
+/* Media Display Container Frame */
+.video-section .video-wrap {
+    background-color: var(--bg-card);
+    padding: 1rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-light);
+}
+
+.video-wrap iframe {
+    width: 100%;
+    min-height: 450px;
+    border-radius: 12px;
+    border: none;
+}
+
+/* Form Container Section */
+.contact-section {
+    background-color: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-light);
+    text-align: center;
+}
+
+.contact-section p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+#form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+#form label {
+    flex-basis: 100%;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+#email {
+    flex: 1 1 350px;
+    padding: 0.95rem 1rem;
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+#email:focus {
+    outline: 2px solid var(--accent-green);
+}
+
+/* ==========================================================================
+   Dynamic Top-Focus Pricing Layout (672px - 995px)
+   ========================================================================== */
+@media (min-width: 672px) and (max-width: 995px) {
+    /* 1. Send unselected cards to the bottom row (higher order value) */
+    .pricing-card {
+        flex: 1 1 calc(50% - 1rem);
+        order: 2; 
+    }
+
+    /* 2. Pull the checked card to the top row (lower order value) 
+          and force it to occupy 100% of the horizontal space */
+    .plan-radio:checked + label.pricing-card {
+        flex: 1 1 100%;
+        order: 1; /* Moves the active card to the absolute top of the grid */
+        background-color: #ebf2ed;
+        border: 2px solid var(--accent-green);
+    }
+}
+
+
+/* ==========================================================================
+   Standard Mobile Responsive Overrides Matrix Block
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        padding-top: 130px; /* Extends tracking space block for stacked navigation */
+    }
+
+    .header-inner {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+    
+    .hero-copy, .hero-image-box {
+        flex: 1 1 100%;
+    }
+
+    .hero-image-box img {
+        height: auto; /* Fluid adaptation on mobile devices */
+    }
+
+    .video-wrap iframe {
+        min-height: 280px;
+    }
+    
+    #form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    #email {
+        flex: 1 1 auto;
+    }
+}

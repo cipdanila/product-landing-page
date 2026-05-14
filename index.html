@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iasi Eco-Mobility — Copou E-Bike</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header id="header">
+        <div class="header-inner">
+            <svg id="header-img" xmlns="w3.org" viewBox="0 0 200 50" width="150" height="38" aria-label="Iasi Eco-Mobility Logo">
+                <text x="10" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1b5e20">Iasi</text>
+                <text x="65" y="35" font-family="Arial, sans-serif" font-size="24" fill="#0f2d1e">Eco</text>
+                <circle cx="125" cy="28" r="6" fill="#1b5e20" />
+                <path d="M125 22 L135 12" stroke="#1b5e20" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            
+            <nav id="nav-bar">
+                <a class="nav-link" href="#features">Features</a>
+                <a class="nav-link" href="#video-section">Green Fleet</a>
+                <a class="nav-link" href="#pricing">Pricing</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="section hero-section">
+            <div class="hero-copy">
+                <h1>Conquer Iasi Hills Effortlessly</h1>
+                <p>Engineered specifically for the steep inclines of Copou and Sararie. Experience the ultimate urban e-bike with smart regenerative braking.</p>
+                <a class="button" href="#form">Reserve Your Ride</a>
+            </div>
+            <div class="hero-image-box">
+                <img src="./palatul-culturii-iasi.jpg" alt="The historic Palace of Culture in Iasi lit up in bright green lights, reflecting the city's green mobility initiatives.">
+                <span class="image-credit">Photo by <a href="https://unsplash.com/@baciutudor?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Tudor Baciu</a> on <a href="https://unsplash.com/photos/a-large-building-lit-up-with-green-lights-2-wTFxcEKqs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a></span>
+            </div>
+        </section>
+
+        <section id="features" class="section">
+            <h2>Engineered For Excellence</h2>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <h3>70Nm Torque Motor</h3>
+                    <p>Climb the toughest city slopes smoothly without breaking a single drop of sweat.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Regenerative Braking</h3>
+                    <p>Recover up to 15% battery capacity automatically while riding down the Bucium hills.</p>
+                </article>
+                <article class="feature-card">
+                    <h3>Eco-Friendly Frame</h3>
+                    <p>Constructed entirely from premium, 100% recycled structural aerospace aluminum alloys.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="video-section" class="section video-section">
+            <h2>Our Integration with Iasi Eco Infrastructure</h2>
+            <div class="video-wrap">
+                <!-- Embedded official report from Euronews Romania regarding green urban transit infrastructure -->
+                <iframe id="video" 
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/wOc2o7KeNtg" 
+                        title="Euronews Romania urban transit infrastructure report" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+
+        <!-- Pricing Plans Component with Built-in No-JS Interactive Radio Selection Buttons -->
+        <section id="pricing" class="section">
+            <h2>Select Your Fleet Access Plan</h2>
+            <div class="pricing-grid">
+                
+                <!-- Option 1 -->
+                <input type="radio" name="plan-select" id="plan-daily" class="plan-radio" checked>
+                <label for="plan-daily" class="pricing-card">
+                    <span class="select-badge">Active Plan</span>
+                    <h3>Daily Pass</h3>
+                    <p class="price-tag">$4.99 / day</p>
+                    <p>Perfect for occasional commutes across the civic center zones.</p>
+                </label>
+
+                <!-- Option 2 -->
+                <input type="radio" name="plan-select" id="plan-monthly" class="plan-radio">
+                <label for="plan-monthly" class="pricing-card highlighted-card">
+                    <span class="select-badge">Active Plan</span>
+                    <h3>Commuter Plus</h3>
+                    <p class="price-tag">$39.99 / month</p>
+                    <p>Includes unlimited 45-minute rides and priority docking access points.</p>
+                </label>
+
+                <!-- Option 3 -->
+                <input type="radio" name="plan-select" id="plan-full" class="plan-radio">
+                <label for="plan-full" class="pricing-card">
+                    <span class="select-badge">Active Plan</span>
+                    <h3>Full Ownership</h3>
+                    <p class="price-tag">$1,499</p>
+                    <p>Own the customized Copou V2 machine with lifetime maintenance included.</p>
+                </label>
+                
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <h2>Join the Green Movement</h2>
+            <p>Sign up to receive localized deployment updates, test-ride event locations, and early-bird discount codes.</p>
+            <form id="form" action="freecodecamp.org" method="POST">
+                <label for="email">Subscribe to our local newsletter:</label>
+                <input id="email" name="email" type="email" placeholder="Enter your email address" required>
+                <input id="submit" class="submit-button" type="submit" value="Get Access">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
