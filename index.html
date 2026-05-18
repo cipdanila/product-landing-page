@@ -9,12 +9,23 @@
 <body>
     <header id="header">
         <div class="header-inner">
-            <svg id="header-img" xmlns="w3.org" viewBox="0 0 200 50" width="150" height="38" aria-label="Iasi Eco-Mobility Logo">
+            <!-- Logo SVG -->
+            <svg id="header-img" xmlns="http://w3.org" viewBox="0 0 200 50" width="150" height="38" aria-label="Iasi Eco-Mobility Logo">
                 <text x="10" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1b5e20">Iasi</text>
                 <text x="65" y="35" font-family="Arial, sans-serif" font-size="24" fill="#0f2d1e">Eco</text>
                 <circle cx="125" cy="28" r="6" fill="#1b5e20" />
                 <path d="M125 22 L135 12" stroke="#1b5e20" stroke-width="3" stroke-linecap="round"/>
             </svg>
+            
+            <!-- The Invisible Checkbox Hack Trigger -->
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            
+            <!-- Premium Accessible Hamburger Button Graphic -->
+            <label for="menu-toggle" class="hamburger-button" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </label>
             
             <nav id="nav-bar">
                 <a class="nav-link" href="#features">Features</a>

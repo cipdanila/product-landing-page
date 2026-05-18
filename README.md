@@ -5,6 +5,7 @@ A premium, accessibility-first product marketing landing page built to showcase 
 ## 🚀 Features & Technical Implementation
 
 *   **Fixed Navigation Component:** Implementation of a strict `position: fixed` header tracking engine layout complying 100% with automated freeCodeCamp assessment criteria.
+*   **No-JS Responsive Hamburger Menu:** Built utilizing "The Checkbox Hack" (`.menu-checkbox:checked ~ #nav-bar`). On viewports under `768px`, the navigation links fold into an elegant slide-down tray while the three-line hamburger morphs fluidly into an "X" close icon using pure CSS transitions.
 *   **Dynamic Top-Focus Pricing Engine (672px - 995px):** A pure CSS layout mechanism driven by sibling combinators (`.plan-radio:checked + label.pricing-card`) and Flexbox ordering. Clicking any plan automatically elevates it to the top row at full-width (`flex: 1 1 100%; order: 1;`), while unselected options gracefully share the row beneath it.
 *   **Accessibility Standards Compliance:** Integrated strict label components (`<label for="email">`), fully descriptive visual asset alt metrics (Axe Linter validated), and secured out-bound links utilizing `rel="noopener noreferrer"`.
 *   **Media Streaming Integration:** Built-in direct responsive wrapper handling an embedded public transit infrastructure video document from Euronews Romania.
@@ -26,5 +27,5 @@ iasi-eco-mobility/
 
 ## 📜 Media Attributions & Special Thanks
 
-*   **Hero Section Imagery:** Special credit to [Tudor Baciu](https://unsplash.com/@baciutudor) for the stunning night photography of the Palace of Culture in Iasi illuminated in green, sourced via [Unsplash](https://unsplash.com).
-*   **Media Report Integration:** Special credit to [Euronews Romania](https://www.youtube.com/@euronewsro) for the informative public broadcast document regarding the green urban transit infrastructure integrated via the YouTube embedded framework.
+*   **Hero Section Imagery:** Special credit to [Tudor Baciu](https://unsplash.com) for the stunning night photography of the Palace of Culture in Iasi illuminated in green, sourced via [Unsplash](https://unsplash.com).
+*   **Media Report Integration:** Special credit to [Euronews Romania](https://youtube.com) for the informative public broadcast document regarding the green urban transit infrastructure integrated via the YouTube embedded framework.
